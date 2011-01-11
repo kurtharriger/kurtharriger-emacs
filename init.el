@@ -5,9 +5,12 @@
       (normal-top-level-add-subdirs-to-load-path))
 
 ;; Windowed
-(modify-frame-parameters (selected-frame) '((alpha . 85)))
-(require 'color-theme)
 (require 'alpha)
+(require 'color-theme)
+(require 'color-theme-ir-black)
+(when window-system 
+  (modify-frame-parameters (selected-frame) '((alpha . 85)))
+  (color-theme-ir-black))
 
 ;; MouseTerm
 (unless window-system
