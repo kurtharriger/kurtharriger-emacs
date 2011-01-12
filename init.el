@@ -22,7 +22,19 @@
                                (interactive)
                                (scroll-up 1))))
 
+;; Viper mode
+(setq viper-mode t)
+(require 'viper)
 
+
+;; spelling
+;; brew install aspell --lang=en
+(setq ispell-program-name "aspell")
+(setq ispell-list-command "list")
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode -1))))
 
 ;; coffee-mode
 ;; (add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
@@ -77,3 +89,15 @@
 ;; (add-to-list 'load-path "~/.emacs.d/vendor/moz-reload-mode")
 ;; (require 'moz-reload-mode)
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(inhibit-startup-screen t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
