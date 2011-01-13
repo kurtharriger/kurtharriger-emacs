@@ -24,7 +24,7 @@
 
 ;; Viper mode
 ;;(setq viper-mode t)
-(require 'viper)
+;;(require 'viper)
 
 
 ;; spelling
@@ -103,6 +103,18 @@
 
 ;; (add-to-list 'load-path "~/.emacs.d/vendor/moz-reload-mode")
 ;; (require 'moz-reload-mode)
+
+;; buffer-move
+(require 'buffer-move)
+
+
+
+
+
+
+
+
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
