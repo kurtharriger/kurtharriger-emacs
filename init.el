@@ -22,6 +22,10 @@
                                (interactive)
                                (scroll-up 1))))
 
+;; disable backups and autosave to prevent clutering working directory
+(setq backup-inhibited t)
+(setq auto-save-default nil)
+
 ;; Viper mode
 ;;(setq viper-mode t)
 ;;(require 'viper)
