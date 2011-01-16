@@ -26,6 +26,8 @@
 ;; disable backups and autosave to prevent clutering working directory
 (setq backup-inhibited t)
 (setq auto-save-default nil)
+(setq auto-save-hash-p nil)
+
 
 ;; Viper mode
 ;;(setq viper-mode t)
@@ -87,7 +89,6 @@
 	     (yas/minor-mode-on))) 
 
 
-.
 (require 'moz-reload-mode)
 
 ;; buffer-move
