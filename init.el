@@ -5,12 +5,13 @@
       (normal-top-level-add-subdirs-to-load-path))
 
 ;; Windowed
-(require 'alpha)
-(require 'color-theme)
-(require 'color-theme-ir-black)
 (when window-system 
+  (require 'alpha)
+  (require 'color-theme)
+  (require 'color-theme-ir-black)
   (modify-frame-parameters (selected-frame) '((alpha . 85)))
-  (color-theme-ir-black))
+  (color-theme-ir-black)
+  (server-start))
 
 ;; MouseTerm
 (unless window-system
@@ -30,6 +31,13 @@
 ;;(setq viper-mode t)
 ;;(require 'viper)
 
+;; yasnippet
+(require 'yasnippet)
+(yas/load-directory "~/.emacs.d/site-lisp/yasnippet/snippets")
+(yas/global-mode)
+
+;; clojure-mode
+(require 'clojure-mode)
 
 ;; spelling
 ;; brew install aspell --lang=en
@@ -72,6 +80,12 @@
              (groovy-electric-mode)))
 
 
+;; Scala mode
+(require 'scala-mode-auto)
+(add-hook 'scala-mode-hook
+	  '(lambda ()
+	     (yas/minor-mode-on))) 
+
 
 
 ;; ECB
@@ -113,19 +127,13 @@
 
 
 
-
-
-
-
-(server-start)
-
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(scala-interpreter "scala-2.8"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
