@@ -87,40 +87,8 @@
 	     (yas/minor-mode-on))) 
 
 
-
-;; ECB
-;; (add-to-list 'load-path "~/.emacs.d/vendor/ecb-snap")
-
-(require 'ecb)
-(require 'ecb-autoloads)
-
-
-;; swank-js
-;;(add-to-list 'load-path "~/.emacs.d/vendor/slime")
-;;(add-to-list 'load-path "~/.emacs.d/vendor/swank-js")
-
-
-
-;;  (require 'slime)
-;;  (slime-setup '(slime-repl slime-js))
-
-;;  (global-set-key [f5] 'slime-js-reload)
-;;  (add-hook 'js2-mode-hook
-;;            (lambda ()
-;;              (slime-js-minor-mode 1)))
-
-;; (add-hook 'css-mode-hook
-;;           (lambda ()
-;;             (define-key css-mode-map "\M-\C-x" 'slime-js-refresh-css)))
-
-;; project-mode
-;; (add-to-list 'load-path "~/.emacs.d/vendor/emacs-project-mode")
-;; (autoload 'project-mode "project-mode" "Project Mode" t)
-;;  (project-load-all) ; Loads all saved projects. Recommended, but not required.
-
-
-;; (add-to-list 'load-path "~/.emacs.d/vendor/moz-reload-mode")
-;; (require 'moz-reload-mode)
+.
+(require 'moz-reload-mode)
 
 ;; buffer-move
 (require 'buffer-move)
