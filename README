@@ -1,0 +1,11 @@
+This is my evolving emacs configuration.  
+I am using emacs 24 nightly build for OS X which includes elpa.  
+Paths to common external applications have been specified to ~/.MacOSX/environment.plist
+
+I'm not a emacs expert so I have no idea if these plugins are properly configured. 
+Use at your own risk and stuff.
+
+I have used the excellent git subtree plugin (https://github.com/apenwarr/git-subtree) to include other git repositories in the site-lisp folder making them easy to update as changes become available and/or contribute back as changes are made. 
+
+Download, Clone, Fork or whatever into your ~/.emacs.d folder.  That's it.
+
