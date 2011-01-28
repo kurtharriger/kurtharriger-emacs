@@ -20,5 +20,5 @@
     (moz-firefox-reload)))
 
 (defun moz-firefox-reload ()
-  (comint-send-string (inferior-moz-process) "BrowserReload();"))
+  (comint-send-string (inferior-moz-process) "setTimeout(BrowserReload, \"1000\");"))
 
